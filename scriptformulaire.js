@@ -3,37 +3,16 @@ let Page= document.querySelector("body");
 let Top = document. querySelector(".haut")
 let Traits = document.querySelector(".tra")
 let TopLeft = document.querySelector(".traits")
+let filtre = document.querySelector(".filtre")
+let sideBar = document.querySelector(".Depliable")
 
 
 BoutonDark.addEventListener ("click",function(){
-Page.classList.toggle('dark-body');
+Page.classList.toggle('dark-back');
 Top.classList.toggle('dark-haut');
 TopLeft.classList.toggle('haut-gauche-dark');
+sideBar.classList.toggle('dark-side-bar');
 });
-
-
-let indexcarte = 0; /* n'est pas vraiment affecter a une carte*/
-function slider_de_carte() {
-   const cartes= document.querySelectorAll('.carte'); /* creation d'une liste */
-    const totalCartes=cartes.length;    
-    const deplacement=-indexcarte *530 ;
-    document.querySelector('.cartes').style.transform = `translateX(${deplacement}px)`;
-
-    cartes.forEach((carte) => {
-        carte.classList.remove('active');
-    });
-        cartes[indexcarte+1].classList.add('active'); /* l'indexcarte est utilser ici pour naviguer dans la Nodeliste cartes*/
-        
-    }
-
-function moveSlide(direction){
-const cartes=document.querySelectorAll('.carte');
-  const totalCartes=cartes.length -1;
-    indexcarte= (indexcarte+direction+totalCartes)%totalCartes; //(calcul le reste, met a jour l'index pour avoir un slider circulaire  
-    slider_de_carte();
-}
-
-
 
 
 
