@@ -81,11 +81,11 @@ CartesFA.forEach((CarteFA) => {
 /*dark mode*/
 let BoutonDark= document.querySelector("#dark");
 let Page= document.querySelector("body");
-let Top = document. querySelector(".haut")
-let Traits = document.querySelector(".tra") /*cration de variable qui appele ici la class tra dans le DOM pour ensuite l'utiliser dans mon code */
-let TopLeft = document.querySelector(".traits")
-let filtre = document.querySelector(".filtre")
-let sideBar = document.querySelector(".Depliable")
+let Top = document. querySelector("header");
+let Traits = document.querySelector(".tra");/*cration de variable qui appele ici la class tra dans le DOM pour ensuite l'utiliser dans mon code */
+let TopLeft = document.querySelector(".traits");
+let filtre = document.querySelector(".filtre");
+let sideBar = document.querySelector(".Depliable");
 
 
 BoutonDark.addEventListener ("click",function(){ /*Lorsque le bouton darkmode est cliquer  */
@@ -109,7 +109,6 @@ function moveSlide(direction){/*Parametre direction est soit -1 pour la gauche  
 const cartes=document.querySelectorAll('.carte'); /*Creation d'une Nodelist avec toutes les cartes  */
   const totalCartes=cartes.length -1; /*Le total de Cartes est ici egal au nombre de carte present dans la Nodelist crée precedement (-1 car c'est un slider de 3 cartes et il va trops loins sinon) */
     indexcarte= (indexcarte+direction+totalCartes)%totalCartes; /*(calcul le reste, met a jour l'index pour avoir un slider circulaire*/  
-    
     slider_de_carte();/*appele la fonction slider pour deplacer les carte selon l'index calculer   */
 }
 
@@ -160,3 +159,6 @@ document.querySelectorAll('.carte').forEach(carte => {
 
 let pickachu = document.querySelector("#pickachu")
 
+pickachu.addEventListener('click',function(){
+
+})

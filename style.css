@@ -1,5 +1,6 @@
 body{
-    background-image: url('image/poke-fond.png');
+    background-image: url("image/poke-fond.png");
+    background-color: #D9D9D9;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -12,7 +13,7 @@ body{
    on met une police d'ecriture qui sera utiliser sur tout le site et on met une couleur pour celle ci 
 */
 
-.haut{
+header{
     display: flex;
     justify-content: space-between;
     background-color: rgb(255, 255, 255);
@@ -118,8 +119,18 @@ transition: 3s;
 transition: 3s;
 }
 /*pareil*/
+h5{
+    color: #ffffff;
+}
 h1{
+    color: #3e76dd;
+    font-size: 80px;
+    text-shadow: 1px 1px 1em #ffffff;
+}
+h3{
     color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-shadow: 1px 1px 1em #3e76dd;
 }
 /*couleur de la police*/
 .slider{
@@ -146,6 +157,15 @@ h1{
     flex-wrap: wrap;
 }/*aligne les cartes pour ma 2eme page de façon a se quel reviennent a la ligne quand elles depassenr de l'ecran*/
 
+.cartes3{
+    display: flex;
+    transition: 1s;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    
+}
 .cartes img{
     width: 500px;
     border-radius: 20px;
@@ -153,6 +173,11 @@ h1{
 /*Taille d'une carte et arrondie les coin*/
 
 .cartes2 img{
+    width: 500px;
+    border-radius: 20px;
+}
+
+.cartes3 img{
     width: 500px;
     border-radius: 20px;
 }
@@ -245,7 +270,6 @@ main{
 }
 /*pareil */
 footer{
-    margin-top: 80px;
     background-color: rgb(28, 28, 28);
     justify-content: space-around;
     position: relative;
@@ -323,8 +347,8 @@ input[type="file" i] {
 }/*pareil mais quand tout va bien */
 
 .message-error ul{
-    background-color: #bf060675;
-    color: #e71212c4;
+    background-color: #24437d;
+    color: #3e76dd;
     border-radius: 20px;    
 }
 /*message d'erreur rouge avec fon rouge*/
@@ -378,6 +402,11 @@ avec une opaciter de 0 et un positionnement de -80 pixel(sur l'axe X) pour la fa
 }
 /*class permettant de faire disparaitre des elements*/
 
+.carte-invisible{
+    opacity: 0;
+    transform: translateX(-80px);
+    pointer-events: none;
+}
 .menu-visible {
     opacity: 1;
     transform: translateX(0);
@@ -426,7 +455,7 @@ avec une opaciter de 0 et un positionnement de -80 pixel(sur l'axe X) pour la fa
 }
 /*creation de la page echange de façon a se qu'elle prenne tout 'l'ecran avec un fond noir transparent */
 .contenu-echange{
-    background-image: url(image/poke-fond-centre.png);
+    background-image: url("image/poke-fond-centre.png");
     color: white;
     background-size: cover;
     width: 50%;
@@ -471,7 +500,6 @@ flex-direction: column;
     left: 1;
     width: 100%;
     height: 100%;
-    
     padding-top: 15px;
     padding-bottom: 15px;
     animation: 8s rotate-back linear infinite; /*fait la keyframe "rotate-back"  pendant 8sec a l'infinie*/
@@ -511,6 +539,105 @@ position: relative;
 }
 /*sert a faire apparaitre le coeur*/
 
+.landing{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 180px;
+color: white;
+text-shadow: 1px 1px 1em #3e76dd;
+}
+
+.landing2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 180px;
+    margin-left: 20px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1em #3e76dd;
+    }
+
+    .landing2 img{
+       width: 50%;
+        }
+    
+.landing img{
+    width: 50%;
+    border-radius: 0px 146px 146px 0px  ;
+
+}
+.landing a{
+     color: #5483ff;
+    }
+
+.titre{
+    width: 50%;
+    margin-left: 40px;
+}
+
+.page-booster{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 120px;
+}
+
+.booster{
+    background-color: #ffffff;
+    border-radius: 24px;
+    width: 55%;
+    margin-bottom: 10%;
+    margin-left: 60px;
+}
+
+
+.collection-image img{
+    border-radius: 24px 24px 0px 0px;
+    width: 100%;
+}
+
+.bouton-ouverture-booster{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #5483ff;
+        width: 80%;
+        border-radius: 24px;
+        color: white;
+        margin-top: 52px;
+        margin-left: 10%;
+        margin-bottom: 32px;
+        gap: 20px;
+
+}
+
+
+
+.titre-booster{
+    margin-left: 20px;
+}
+
+.description-booster{
+    margin-left: 20px;
+}
+
+.ouverture-booster :hover{
+     transform: scale(1.1);
+cursor: pointer;
+}
+
+.dark-filtre{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.logo-site img{
+width: 300px;
+}
+
+
 @keyframes rotate-back{
     0% {
        --angle:0deg; 
@@ -526,6 +653,9 @@ position: relative;
     syntax:"<angle>"; /* type de la variable*/
     inherits: false; /* Permet que la variable soit utiliser une seul fois et que les sous division n'herite pas de celle ci ,*/
 }
+
+
+
 
 @media screen and (max-width: 800px){
 
@@ -550,9 +680,7 @@ margin-left:  20px;
 display:flex;
 z-index: 100;
 }/*fait apparaite le bouton permettant d'afficher la sidebar*/
-.slider{
-    width: 530px;
-}/*permet que le slider affiche seulement 1 carte*/
+
 .compte {
    
     height: 54px;
@@ -563,23 +691,76 @@ z-index: 100;
     width: 300px;
 }/*reduit la taille des cartes de ma deuxiem page*/
 
+.cartes3 img{
+    width: 300px;
 }
+.non-favoris img{
+    width: 40px;
+    padding: 10px; 
+}
+
+
+}
+
+
+
+@media screen and (max-width: 700px){
+    h1{
+        font-size: 30px;
+    }
+    h2{
+    font-size: 20px;
+    }
+    
+
+    .landing2 img{
+        width: 50%;
+        position: relative;
+        bottom: 0;
+        right: 0;
+         }
+
+         
+     
+ .landing img{
+     width: 50%;
+     border-radius: 0px 85px 85px 0px  ;
+ 
+ }
+ .landing2{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+     }
+}
+
+
 @media screen and (max-width: 500px)
 {
     .cartes2 img{
         width: 150px;
         
-    }  
+    }
+    .cartes3 img{
+        width: 150px;
+        
+    }
+
+    .non-favoris img{
+        width: 20px; 
+        padding: 10px;
+    }
     /*reduit la taille des cartes de ma deuxiem page* pour la version mobile */
+    .logo-site img{
+        width: 150px;
+        }
 }
 
 @media screen and (min-width: 800px){
 .footer1{
     display: flex;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
+   
 }
 
 .tra{
@@ -596,6 +777,86 @@ z-index: 100;
     body{
         zoom: 0.5;
     }
-    /*change le zoom de base du site (pour passer de la 4k a la 2k )*/
+    /*change le zoom de base du site (pour passer de la 4k a la 2K*/
 
     }
+
+    
+/*Slider et booster querry media */
+
+
+@media screen and (max-width: 769px){
+        
+    
+    .main1{
+        zoom: 0.85;
+    }
+    .booster{
+        zoom: 0.9;
+    }
+
+}
+    
+    @media screen and (max-width: 569px){
+        
+        .filtre
+        {
+            zoom: 0.8;
+        }
+        .main1{
+            zoom: 0.55;
+        
+        }
+    
+    .booster{
+        zoom: 0.7;
+    }
+    }
+
+@media screen and (max-width: 426px){
+        
+    .filtre
+    {
+        zoom: 0.8;
+    }
+    .main1{
+        zoom: 0.45;
+
+    }
+    .booster{
+        zoom: 0.5;
+    }
+
+}
+
+
+
+    @media screen and (max-width: 376px){
+        .landing img{
+            border-radius: 0px 60px 60px 0px;
+        }
+    .filtre
+    {
+        zoom: 0.8;
+    }
+    .main1{
+        zoom: 0.4;
+    }}
+
+   
+
+
+    @media screen and (max-width: 320px){
+        .landing img{
+            border-radius: 0px 60px 60px 0px;
+        }
+    .filtre
+    {
+        zoom: 0.8;
+    }
+    .main1{
+        zoom: 0.35;
+    }}
+
+  
+

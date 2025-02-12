@@ -2,14 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Site de jeux à collectionnez de cartes Pokémon.  Ouvrez des booster. Echangez vos cartes. ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon & Co</title>
+    <title>Pokemon</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-    <!-- division pour le header de mon site suivie de division qui vont servir pour le menu-->
-    <header> 
+<header> 
         <div class="traits">
             <div class="tra">
                 <img src="image/3barre.png" alt="dragon ball 1" width="70px"  >
@@ -21,10 +18,6 @@
             <a href="Amis.html"><p> Amis</p></a>
         </div>
         </div>
-        <div class="logo-site">
-            <img src="image/pokemon-&-Co.png" alt="Logo pokemon & co" width="300px">
-        </div>
-        
 <div class="haut-droit">
     <div class="darkmode" id="dark">
         <img src="image/blue-moon.png" alt="moon" width="40px" height="40px" >
@@ -52,164 +45,51 @@
 </div>
 </div>
 
-<div class="landing">
-    <img src="image/pickachu-fond-jaune.png" alt="image de pickachu fond jaune" >
-    <div class="titre">
-        <h1>Pokemon And Co</h1>
-        <h2> La plateforme ultime pour tous les passionné de cartes <a href="https://www.pokemon.com/fr">Pokemon ! </a>   <br> Ici ouvrez des boosters en direct, enrichissez votre collection en directe et partager votre passion avec vos amis ! </h2>
+<div class="page-booster">
+    <div class="booster">
+        <div class="collection-image">
+        <img src="image/ecarlate-et-violet.jpg" alt="">
     </div>
-    
-</div>
-<div class="filtre">
-    <div class="bouton Tous-carte active-filtre tab1 tab">
-    <p>Tous </p>
-</div>
-<div class="bouton Commun tab2 tab">
-    <p>Commun</p>
-</div>
-<div class="bouton Full-Art tab3 tab">
-    <p>Full-Art</p>
-</div>
-<div class="bouton Rare tab4 tab">
-    <p>Hyper Rare</p>
-</div>
-</div>
-<main class="main1">
-    <button class="arrow left" onclick="moveSlide(-1)"><</button>
-<div class="slider contenu contenu1 contenu-active">
-    <div class="cartes">
-        
-        <!-- Creation de division avec une images de la carte et leurs rareté mis en tant que class pour le systeme de filtre-->
-        <div class="carte Rare-carte " id="Trioxhydre-ex" name="Trioxhydre-ex" > 
-            <img src="Cartes/Trioxhydre-ex.jpg" alt="carte pokemonTrioxhydre-ex" >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" > <!--ajout d'une image de coeur vide sur la carte-->
-            </div>
+        <div class="titre-booster"><h4>Écarlate & Violet</h4></div>
+        <div class="description-booster">La dernière extension Pokémon sortie à ce jour.</div>
+        <div class="ouverture-booster"> 
+           <div class="bouton-ouverture-booster">
+            <img src="image/logo-pokemon-blanc.png" alt="" width="50px"><h4>Ouvrir le booster</h4>
+           </div> 
         </div>
+    </div>
 
-        <div class="carte active Rare-carte "id="pikachu" name="pikachu"> 
-            <img src="Cartes/pikachu ex.jpg" alt="pikachu" >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-                <!-- meme principe pour toute les cartes -->
-            </div>
-        </div>
+    <div class="cartes3">
 
-        <div class="carte Rare-carte" id="Nymphalie-ex" name="Nymphalie-ex"> 
-            <img src="Cartes/Nymphalie-ex.jpg" alt="Nymphalie-ex"  >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div>   
-
-        
-
-        <div class="carte Rare-carte" id="Libégon_ex" name="Libégon_ex"> 
-            <img src="Cartes/Libégon_çex.jpg" alt="Libégon_ex"  >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div> 
-
-        <div class="carte Rare-carte" id="Motorizard_ex" name="Motorizard_ex"> 
-            <img src="Cartes/Motorizard_ex.jpg" alt="Motorizard_ex"  >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div> 
-
-        <div class="carte Rare-carte" id="Trépassable_ex" name="Trépassable_ex"> 
-            <img src="Cartes/Trépassable_ex.jpg" alt="Trépassable_ex"  >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div> 
-
-        <div class="carte Rare-carte" id="Nigiridon" name="Nigiridon"> 
-            <img src="Cartes/Nigiridon.jpg" alt="Nigiridon"  >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div> 
-
-        <div class="carte Commun-carte" id="Togepi" name="Togepi"> 
+        <div class="carte Commun-carte"> 
             <img src="Cartes/Togepi.jpg" alt="Togepi"  >
             <div class="non-favoris"> 
                 <img src="image/coeur-vide.png" alt="coeur-vide" >
             </div>
         </div>
-
-        <div class="carte Commun-carte" id="Obalie" name="Obalie"> 
+    
+        <div class="carte Commun-carte"> 
             <img src="Cartes/Obalie.jpg" alt="Obalie" >
             <div class="non-favoris"> 
                 <img src="image/coeur-vide.png" alt="coeur-vide" >
             </div>
         </div>
-
-        <div class="carte Commun-carte" id="Goupix" name="Goupix"> 
+    
+        <div class="carte Commun-carte"> 
             <img src="Cartes/Goupix.jpg" alt="Goupix" >
             <div class="non-favoris"> 
                 <img src="image/coeur-vide.png" alt="coeur-vide" >
             </div>
         </div>  
-        <div class="carte Commun-carte " id="Tag-Tag" name="Tag-Tag"> 
+        <div class="carte Commun-carte "> 
             <img src="Cartes/Tag-Tag.jpg" alt="Tag-Tag">
             <div class="non-favoris"> 
                 <img src="image/coeur-vide.png" alt="coeur-vide" >
             </div>
         </div>
 
-        <div class="carte Full-Art-carte" id="Denticrisse_FA" name="Denticrisse_FA"> 
-            <img src="Cartes/Denticrisse_FA.jpg" alt="Denticrisse_FA" >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div>
-
-        <div class="carte Full-Art-carte" id="Dratatin-FA" name="Dratatin-FA"> 
-            <img src="Cartes/Dratatin-FA.jpg" alt="Dratatin-FA"  >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="non favoris coeur-vide" >
-            </div>
-        </div>
-
-        <div class="carte Full-Art-carte" id="Latios-FA" name="Latios-FA"> 
-            <img src="Cartes/Latios-FA.jpg" alt="Latios-FA" >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="non favoris coeur-vide" >
-            </div>
-        </div>
-
-        <div class="carte Full-Art-carte" id="Obalie_FA" name="Obalie_FA"> 
-            <img src="Cartes/Obalie_FA.jpg" alt="Obalie_FA" >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div>
-
-        <div class="carte Full-Art-carte" id="Parecool_F" name="Parecool_FA"> 
-            <img src="Cartes/Parecool_FA.jpg" alt=" carte pokemon Parecool full-art " name="Libégon_ex">
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div>
-
-        <div class="carte Full-Art-carte" id="Poulpaf_FA" name="Poulpaf_FA"> 
-            <img src="Cartes/Poulpaf_FA.jpg" alt="carte pokemon de Poulpaf Full-Art" >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div>
-
-        <div class="carte Full-Art-carte" id="Milobellus_FA" name="Libégon_ex"> 
-            <img src="Cartes/Milobellus ex.jpg" alt="carte pokemon de Milobellus Full-Art" name="Libégon_ex" >
-            <div class="non-favoris"> 
-                <img src="image/coeur-vide.png" alt="coeur-vide" >
-            </div>
-        </div> 
-
-        <div class="carte Full-Art-carte" id="triopikeu_FA" name="triopikeu_FA"> 
-            <img src="Cartes/triopikeu_FA.jpg" alt="Carte pokemon de triopikeu Full-Art" >
+        <div class="carte Commun-carte "> 
+            <img src="Cartes/Altarai.jpg" alt="Altarai">
             <div class="non-favoris"> 
                 <img src="image/coeur-vide.png" alt="coeur-vide" >
             </div>
@@ -412,26 +292,143 @@
                 <img src="image/coeur-vide.png" alt="coeur-vide" >
             </div>
         </div>
-
-    <div class="fin_slider Full-Art-carte" id="Créfollet-FA" name="Créfollet-FA"> 
-        <img src="Cartes/Créfollet-FA.jpg" alt="Carte pokemon de Créfollet Full-Art" width="350px">
+        
+        
+        <div class="carte Rare-carte"> 
+            <img src="Cartes/Trioxhydre-ex.jpg" alt="Trioxhydre-ex" >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>
+    
+        <div class="carte active Rare-carte"> 
+            <img src="Cartes/pikachu ex.jpg" alt="pikachu" >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>
+    
+        <div class="carte Rare-carte"> 
+            <img src="Cartes/Nymphalie-ex.jpg" alt="Nymphalie-ex"  >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>   
+    
+        
+    
+        <div class="carte Rare-carte"> 
+            <img src="Cartes/Libégon_çex.jpg" alt="Libégon_çex"  >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div> 
+    
+        <div class="carte Rare-carte"> 
+            <img src="Cartes/Motorizard_ex.jpg" alt="Motorizard_ex"  >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div> 
+    
+        <div class="carte Rare-carte"> 
+            <img src="Cartes/Trépassable_ex.jpg" alt="Trépassable_ex"  >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div> 
+    
+        <div class="carte Rare-carte"> 
+            <img src="Cartes/Nigiridon.jpg" alt="Nigiridon"  >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div> 
+    
+       
+    
+        <div class="carte Full-Art-carte"> 
+            <img src="Cartes/Denticrisse_FA.jpg" alt="Denticrisse_FA" >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>
+    
+        <div class="carte Full-Art-carte"> 
+            <img src="Cartes/Dratatin-FA.jpg" alt="Dratatin-FA" >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>
+    
+        <div class="carte Full-Art-carte"> 
+            <img src="Cartes/Latios-FA.jpg" alt="Latios-FA" >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>
+    
+        <div class="carte Full-Art-carte"> 
+            <img src="Cartes/Obalie_FA.jpg" alt="Obalie_FA" >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>
+    
+        <div class="carte Full-Art-carte"> 
+            <img src="Cartes/Parecool_FA.jpg" alt="Parecool_FA" >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>
+    
+        <div class="carte Full-Art-carte"> 
+            <img src="Cartes/Poulpaf_FA.jpg" alt="Poulpaf_FA" >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>
+    
+        <div class="carte Full-Art-carte"> 
+            <img src="Cartes/Milobellus ex.jpg" alt="Milobellus_FA"  >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div> 
+    
+        <div class="carte Full-Art-carte"> 
+            <img src="Cartes/triopikeu_FA.jpg" alt="triopikeu_FA" >
+            <div class="non-favoris"> 
+                <img src="image/coeur-vide.png" alt="coeur-vide" >
+            </div>
+        </div>
+    
+    
+    <div class="carte Full-Art-carte"> 
+        <img src="Cartes/Créfollet-FA.jpg" alt="Créfollet-FA" width="350px">
         <div class="non-favoris"> 
             <img src="image/coeur-vide.png" alt="coeur-vide" >
         </div>
     </div>
     </div>
- </div>
- <button class="arrow right" onclick="moveSlide(1)">></button>
- <!-- met le parametre direction de la fonction moveSlide a 1 (droite) -->
-</main>
-<div class="landing2">
-    
-    <div class="titre">
-        <h1>Echangez Vos Cartes !</h1>
-        <h2>Vous avez des cartes en double ou que vous n’utilisez plus ? Trouvez facilement des joueurs avec qui échanger et complétez votre collection en un rien de temps !</h3>
-    </div>
-    <img src="image/landing-images.png" alt="landing-images" >
 </div>
+
+
+<div class="page-booster">
+    <div class="booster">
+        <div class="collection-image">
+        <img src="image/Pokemon-JCC-Flammes-Obsidiennes.jpeg" alt="">
+    </div>
+        <div class="titre-booster"><h4>Flammes</h4></div>
+        <div class="description-booster">La collection préférée des collectionneurs !</div>
+        <div class="ouverture-booster"> 
+           <div class="bouton-ouverture-booster">
+            <img src="image/logo-pokemon-blanc.png" alt="" width="50px"><h4>Ouvrir le booster</h4>
+           </div> 
+        </div>
+    </div>
+</div>
+
 <footer class="footer1"> 
     <div class="nous">
     <h5>A propos de nous</h5>
@@ -475,6 +472,6 @@
             </div>
 
 </footer>
-<script src="script.js"></script>
+<script src="scriptbooster.js"></script>
 </body>
 </html>
