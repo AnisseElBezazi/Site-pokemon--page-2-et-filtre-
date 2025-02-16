@@ -2,12 +2,12 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Site de jeux à collectionnez de cartes Pokémon.  Ouvrez des booster. Echangez vos cartes. ">
+    <meta name="description" content="Collectionnez des cartes Pokémon, ouvrez des boosters et échangez avec d'autres joueurs ! Rejoignez la communauté et agrandissez votre collection dès maintenant.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon & Co</title>
+    <title>Cartes Pokémon rares : Ouvrez des boosters et complétez votre deck</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body class="body1">
     <!-- division pour le header de mon site suivie de division qui vont servir pour le menu-->
     <header> 
         <div class="traits">
@@ -48,14 +48,18 @@
     <a href="Booster.html"><p> Booster</p></a>
 </div>
 <div class= Echange>
-    <p> Amis</p>
+    <a href="Amis.html"><p>Amis</p></a>
 </div>
 </div>
 
 <div class="landing">
     <img src="image/pickachu-fond-jaune.png" alt="image de pickachu fond jaune" >
     <div class="titre">
-        <h1>Pokemon And Co</h1>
+        <div class="collectionnez">
+            <h1>Collectionnez <br>
+                et ouvrez !</h1>
+        </div>
+        
         <h2> La plateforme ultime pour tous les passionné de cartes <a href="https://www.pokemon.com/fr">Pokemon ! </a>   <br> Ici ouvrez des boosters en direct, enrichissez votre collection en directe et partager votre passion avec vos amis ! </h2>
     </div>
     
@@ -87,7 +91,7 @@
             </div>
         </div>
 
-        <div class="carte active Rare-carte "id="pikachu" name="pikachu"> 
+        <div class="carte active Rare-carte pikachu "id="pikachu" name="pikachu"> 
             <img src="Cartes/pikachu ex.jpg" alt="pikachu" >
             <div class="non-favoris"> 
                 <img src="image/coeur-vide.png" alt="coeur-vide" >
@@ -456,24 +460,35 @@
             <h2> Echangé des cartes :</h2>
             <form class="page-echange">
                 <label for="personne">Choix de la personne:</label>
-                <select id="personne" name="personne" required>
+                <select class= "input-echange" id="personne" name="personne" required>
                     <option value="person1">Yanis</option>
                     <option value="person2">Loic</option>
                     <option value="person3">Elise</option>
                 </select>
                 
                 <label for="choix-carte">Choix de la carte:</label>
-                <select id="cartes" name="cartes" required>
+                <select class= "input-echange" id="cartes" name="cartes" required>
                     <option value="carte">Togepi</option>
                     <option value="carte">Obalie</option>
                     <option value="carte">Nymphalie-ex</option>
                 </select>
                 
-                <button type="submit">Envoyer</button>
+                <button  type="submit" class= "input-echange">Envoyer</button>
             </form>
             </div>
             </div>
-
+            <div class="pickachu-page disapear">
+                <div class="content-pickachu-page"> 
+                    <span class="croix2" >x</span> 
+                    <div class="image-carte">
+                        <img src="Cartes/pikachu ex.jpg" alt="carte pickachu-ex">
+                    </div>
+                    <div class="histoire-carte">
+                        <h4>Pikachu est un Pokémon de type Électrik, connu pour sa capacité à manipuler l'électricité. <br><br>Il est devenu célèbre en tant que compagnon fidèle de Sacha dans la série Pokémon. <br><br>Depuis ses débuts dans les jeux vidéo en 1996, Pikachu est devenu un symbole de la culture populaire et un favori des fans dans le monde entier.</h4>
+                    </div>
+                    
+                </div>
+            </div>
 </footer>
 <script src="script.js"></script>
 </body>

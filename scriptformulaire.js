@@ -1,6 +1,6 @@
 let BoutonDark= document.querySelector("#dark");
 let Page= document.querySelector("body");
-let Top = document. querySelector(".haut")
+let Top = document. querySelector("header")
 let Traits = document.querySelector(".tra")
 let TopLeft = document.querySelector(".traits")
 let filtre = document.querySelector(".filtre")
@@ -32,7 +32,7 @@ form.addEventListener("submit",function(event){
     if (variablePseudo.value.trim().length<6){  /*verifie si le pseudo a moins de 6 caracter */
         variablePseudo.classList.remove("succes"); /*retire la classe succes a pseudo dans le html */
         variablePseudo.classList.add("error");/*ajoute la classe error a pseudo dans le html afin de modifier le css */
-       ListeErreur.innerHTML += "<li>le pseudo doit comporter au moins 6 caractere</li>";
+       ListeErreur.innerHTML += "<li>le pseudo doit comporter au moins 6 caractere<br></li>";
     }
     else{
         variablePseudo.classList.remove("error");/*retire la classe error a pseudo dans le html */
@@ -42,7 +42,7 @@ form.addEventListener("submit",function(event){
     if(variableemail.value.trim()===""){  /*verifie si le mail est vide */
         variableemail.classList.remove("succes");
         variableemail.classList.add("error");
-        ListeErreur.innerHTML += "<li>L'email est vide</li>";
+        ListeErreur.innerHTML += "<li>L'email est vide<br></li>";
     }
     else{
         variableemail.classList.remove("error");
@@ -52,7 +52,7 @@ form.addEventListener("submit",function(event){
     if (variablePassword.value.trim().length<8){  /*verifie si le mots de passe a au moins de 8 caracter */
         variablePassword.classList.remove("succes");
         variablePassword.classList.add("error");
-        ListeErreur.innerHTML += "<li>Votre mots de passe doit contenir au moins 8 caracter</li>";
+        ListeErreur.innerHTML += "<li>Votre mots de passe doit contenir au moins 8 caracter<br></li>";
     }
     else{
         variablePassword.classList.remove("error");
@@ -62,7 +62,7 @@ form.addEventListener("submit",function(event){
     if (variablePassword.value.trim() !== variablePassword2.value.trim()){  /*verifie si le mots de passeest identique */
         variablePassword2.classList.remove("succes");
         variablePassword2.classList.add("error");
-        ListeErreur.innerHTML += "<li>Le mots de passe n'est pas identique</li>";
+        ListeErreur.innerHTML += "<li>Le mots de passe n'est pas identique<br></li>";
     }
     else{
         variablePassword2.classList.remove("error");
@@ -73,9 +73,17 @@ form.addEventListener("submit",function(event){
     }
     
     if (Valid==true) {
-        SuccesMessage.innerHTML += "<li>Le fomulaire a ete remplie avec succes !</li>"; /*Rajoute une ligne dans le html dans le <ul> de la division message-succes*/
+        SuccesMessage.innerHTML += "<li>Le fomulaire a ete remplie avec succes !<br></li>"; /*Rajoute une ligne dans le html dans le <ul> de la division message-succes*/
     }
     event.preventDefault();
 })
 
 
+/*sideBar*/
+
+let MenuMobile =document.querySelector(".tra") /* Bouton avec les 3 traits  */
+let Depliant = document.querySelector(".Depliable")/*Menu depliant */
+
+MenuMobile.addEventListener ("click",function(){ /* lorsque qu'on click sur les 3 traits  */
+   Depliant.classList.toggle("menu-visible");/*On rajoute au menu depliant une class ccs lui permetant de passer l'opacité a 1 et changer sa position */
+})

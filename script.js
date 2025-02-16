@@ -157,8 +157,15 @@ document.querySelectorAll('.carte').forEach(carte => {
 
 /*Stats carte */
 
-let pickachu = document.querySelector("#pickachu")
+let pickachu = document.querySelector(".pikachu")
+let pagePickachu =  document.querySelector(".pickachu-page")
 
 pickachu.addEventListener('click',function(){
 
+pagePickachu.classList.remove("disapear")
 })
+
+pagePickachu.addEventListener('click',function(){
+
+    pagePickachu.classList.add("disapear")
+    })

@@ -1,5 +1,5 @@
 body{
-    background-image: url("image/poke-fond.png");
+    background-image: url("image/baa.jpg");
     background-color: #D9D9D9;
     background-size: cover;
     background-position: center;
@@ -8,10 +8,11 @@ body{
     background-repeat: no-repeat;
     color: rgb(90, 90, 90);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    transition: 1s;
+    transition: 3s;
 } /*mise en page du background pour qu'il soit fixe et bien placé avec une image  
    on met une police d'ecriture qui sera utiliser sur tout le site et on met une couleur pour celle ci 
 */
+
 
 header{
     display: flex;
@@ -24,17 +25,18 @@ header{
     right: 0;
     left: 0;
     z-index: 1;
+    
 }
 /*positionnement du header de ma page pour qu'il prenent toutes la longueur et soit toujours apparant 
  aligne les images et texte et met un espace entre mes 2 grosse division parent avec un flex pour le responsive*/
 .dark-haut{
     background-color: rgb(28, 28, 28);
-    transition: 1s;
+    transition: 3s;
 }
 /*change le header en noir*/
 .dark-back{
-    background-image: url("image/poke-fond-dark.png");
-    transition: 1s;
+    background-image: url("image/ba2.jpg");
+    transition: 3s;
 }
 /*change l'image de fond par une image plus sombre*/
 
@@ -46,7 +48,7 @@ header{
 /*aligne les texte et image des division enfant de mon header et met un espace de 30 pixel entre eux */
 .haut-gauche-dark{
     filter: invert();
-transition: 1s ;
+transition: 3s ;
 }
 /*inverse la couleur de la parite en haut a gauche de mon header pour le darkmode*/
 
@@ -74,8 +76,8 @@ transition: 1s ;
     gap: 10px;
     background-color: #3e76dd;
     border-radius: 12px;
-    width: 176px;
-    height: 59px;
+    width: 200px;
+    height: 60px;
     justify-content: center;
     margin-right: 10px;
 }
@@ -94,7 +96,7 @@ transition: 1s ;
 
 
 p{
-    font-size: 20px;
+    font-size: 25px;
 }
 /*taille de la police*/
 .compte a{
@@ -102,6 +104,11 @@ p{
     color: aliceblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.menu-text a :hover{
+    transform: scale(1.1);
+}
+
 /*Change la couleur des lien dans la division "compte" et enleve le fait qu'ils soient souligner */
 
 .traits a{
@@ -122,10 +129,16 @@ transition: 3s;
 h5{
     color: #ffffff;
 }
+
 h1{
-    color: #3e76dd;
+    color: #6198fc;
     font-size: 80px;
-    text-shadow: 1px 1px 1em #ffffff;
+    text-shadow: 1px 1px 7px #000000;
+    
+    animation:left-right linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
 }
 h3{
     color: rgb(255, 255, 255);
@@ -138,6 +151,10 @@ h3{
     width: 1560px;
     overflow: hidden;
     position: relative;
+    animation: left-right linear;
+    animation-timeline: view();
+    animation-range-start: cover 12% ;
+    animation-range-end: contain 50%;
 }/*met la largeur du slider a 1560 pixel pour pouvoir afficher 3 cartes et cache tout se qui depasse */
 
 .cartes{
@@ -155,6 +172,7 @@ h3{
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    
 }/*aligne les cartes pour ma 2eme page de façon a se quel reviennent a la ligne quand elles depassenr de l'ecran*/
 
 .cartes3{
@@ -169,16 +187,21 @@ h3{
 .cartes img{
     width: 500px;
     border-radius: 20px;
+    
 }
 /*Taille d'une carte et arrondie les coin*/
 
 .cartes2 img{
     width: 500px;
     border-radius: 20px;
+    animation: reveal linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
 }
 
 .cartes3 img{
-    width: 500px;
+    width: 400px;
     border-radius: 20px;
 }
 /*pareil*/
@@ -200,13 +223,17 @@ main{
 }
 /*aligne les division de mon main  et met au centre mon main  */
 .filtre{
-    margin-top: 80px;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-self: center;
     background-color: rgb(255, 255, 255);
     border-radius:12px ;
     padding: 3px;
+    animation: reveal linear;
+    animation-timeline: view();
+    animation-range-start: contain 20% ;
+    animation-range-end: contain 50%;
 }
 /*mise en page de la division parent de mon system de filtre  */
 .dark-filtre{
@@ -239,6 +266,7 @@ main{
 .arrow:hover{
     cursor: pointer;
     transform: scale(1.2);
+    
 }
 /*agrandie les fleche du slider*/
 
@@ -253,6 +281,11 @@ main{
     justify-content: center;
     align-items: center;
     transform: scale(1.2);
+    background-color: white;
+    animation:left-right linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
 }
 /*Mise en forme des fleche du slider avec un flex pour le responsive  */
 
@@ -267,9 +300,15 @@ main{
     justify-content: center;
     align-items: center;
     transform: scale(1.2);
+    background-color: white;
+    animation: left-right linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
 }
 /*pareil */
 footer{
+    display: flex;
     background-color: rgb(28, 28, 28);
     justify-content: space-around;
     position: relative;
@@ -286,7 +325,7 @@ footer p{
 
  
     .inscription{
-    background-color: #000000;
+    background-color: #252525;
     border-radius: 24px;
     display: flex;
     justify-content: center;
@@ -304,20 +343,32 @@ footer p{
     label {
     display: block;
     margin-bottom: 8px;
+    color: #3e76dd;
+    
     }
     
     input {
-    width:100%;
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0px;
+    border-bottom: solid 1px white;
+    text-align: center;
     }
     .formulaire{
         width: 50%;
-        display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        left: 30%;
+        left: 28%;
         margin-top: 11%;
         margin-bottom: 10%;
+        text-align: center;
+}
+.formulaire h1{
+    color: #6198fc;
+    font-size: 80px;
+    text-shadow: 1px 1px 40px #ffffff;
 }
 /*met la division parent du formulaire au au centre */
 form img{
@@ -328,7 +379,7 @@ input[type="file" i] {
 }
 .formulaire_droite{
     position: relative;
-    right: 18%;
+
 }
 .haut-formulaire{
     display: flex;
@@ -337,40 +388,36 @@ input[type="file" i] {
 }
 
 .error{
-    border: 2px solid red;
+    border-bottom: 2px solid red;
     color: red;
 }
 /*met les contour des zones de saisie en rouge lorsqu'il y a une erreur*/
 .succes{
-    border: 2px solid rgb(0, 255, 30);
+    border-bottom: 2px solid rgb(0, 255, 30);
     color: rgb(0, 255, 30);
 }/*pareil mais quand tout va bien */
 
 .message-error ul{
-    background-color: #24437d;
-    color: #3e76dd;
+    margin-left: 30px;
+
+    color: #dd3e3e;
     border-radius: 20px;    
 }
 /*message d'erreur rouge avec fon rouge*/
-.message{
-    width: 35%;
-}
+
 .message-succes ul{
-    background-color: #0ba92375;
+    margin-left: 30px;
     color: #36ff04;
     border-radius: 20px;
 }/*pareil mais en vert*/
-.cookies{
-    display: flex;
-    flex-direction: row-reverse;
-    width: 110px;
-    margin-top: 10px;
-}
 
-.cookies-label{
- font-size: 20px;
+.inscription-boutton{
+    border-radius: 11px;
+    font-size: 43px;
+    background-color: #4378ce;
+    color: white;
+    padding: 20px;
 }
-
 
 
 
@@ -500,8 +547,7 @@ flex-direction: column;
     left: 1;
     width: 100%;
     height: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px;
     animation: 8s rotate-back linear infinite; /*fait la keyframe "rotate-back"  pendant 8sec a l'infinie*/
     z-index: -1;/*place celui ci derriere le formulaire */
     filter: blur(3px);/*effet de flou*/
@@ -541,39 +587,52 @@ position: relative;
 
 .landing{
 display: flex;
-align-items: center;
-justify-content: space-between;
-margin-top: 180px;
-color: white;
-text-shadow: 1px 1px 1em #3e76dd;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 180px;
+    color: #ffffff;
+    text-shadow: 1px 6px 23px #000000;
+    background-color: rgb(0 0 0 / 25%);
+    animation: reveal linear 1s;
+    
 }
 
 .landing2{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 180px;
-    margin-left: 20px;
-    color: #ffffff;
-    text-shadow: 1px 1px 1em #3e76dd;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 180px;
+        color: #ffffff;
+        text-shadow: 1px 6px 23px #000000;
+        background-color: rgb(0 0 0 / 25%);
+        
     }
 
     .landing2 img{
        width: 50%;
+       animation: reveal linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
         }
     
 .landing img{
-    width: 50%;
+    width: 40%;
     border-radius: 0px 146px 146px 0px  ;
+    animation: reveal linear 1s;
 
 }
 .landing a{
-     color: #5483ff;
+     color: #f30707;
     }
 
 .titre{
     width: 50%;
     margin-left: 40px;
+    animation: left-right linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
 }
 
 .page-booster{
@@ -637,6 +696,52 @@ cursor: pointer;
 width: 300px;
 }
 
+.input-echange 
+{
+        border-radius: 7px;
+    border: solid 5px #3e76dd;
+    color: #3e76dd;
+}
+
+.pickachu-page{
+    position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     z-index: 10;/*permet de mettre la page au dessus */
+}
+
+.content-pickachu-page{
+    color: white;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    gap: 30px;
+}
+.image-carte img{
+border-radius: 24px;
+}
+
+.croix2{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 
 @keyframes rotate-back{
     0% {
@@ -648,13 +753,66 @@ width: 300px;
     }
     /*keyframe changeant l'angle du gradiant derriere le formulaire */
 }
+
+@keyframes reveal{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes left-right{
+    from{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    to{
+        transform:translateX(0) ;
+        opacity: 1;
+    }
+}
+
+@keyframes right-left{
+    from{
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    to{
+        transform:translateX(0) ;
+        opacity: 1;
+    }
+}
+
+@keyframes reveal-haut{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 @property --angle{
     initial-value: 0deg; /*donne la valeur initial de la variable angle*/
     syntax:"<angle>"; /* type de la variable*/
     inherits: false; /* Permet que la variable soit utiliser une seul fois et que les sous division n'herite pas de celle ci ,*/
 }
 
-
+@media screen and (max-width: 900px){
+    .landing img{
+        width: 48%;
+      
+    
+    }
+    }
 
 
 @media screen and (max-width: 800px){
@@ -665,7 +823,7 @@ width: 300px;
 }
 
 footer{
-    display: column;
+    flex-direction: column;
 }/*met les elements du footer en collonne pour la version mobile et tablette*/
 .nous{
 margin-left:  20px; 
@@ -700,6 +858,7 @@ z-index: 100;
 }
 
 
+
 }
 
 
@@ -710,6 +869,10 @@ z-index: 100;
     }
     h2{
     font-size: 20px;
+    }
+    
+    .landing a{
+        font-size: 20px;
     }
     
 
@@ -758,9 +921,9 @@ z-index: 100;
 }
 
 @media screen and (min-width: 800px){
-.footer1{
+.footer{
     display: flex;
-   
+    flex-direction:row;
 }
 
 .tra{
@@ -794,6 +957,9 @@ z-index: 100;
     .booster{
         zoom: 0.9;
     }
+    .formulaire{
+        zoom: 0.8;
+    }
 
 }
     
@@ -811,6 +977,9 @@ z-index: 100;
     .booster{
         zoom: 0.7;
     }
+    .formulaire{
+        zoom: 0.6;
+    }
     }
 
 @media screen and (max-width: 426px){
@@ -826,6 +995,7 @@ z-index: 100;
     .booster{
         zoom: 0.5;
     }
+  
 
 }
 

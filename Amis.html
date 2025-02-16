@@ -5,46 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon</title>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="library.css"/>
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
 
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper {
-      width: 1100px;
-      height: 1100px;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-  </style>
 <body>
     <!-- division pour le header de mon site suivie de division qui vont servire -->
     <header> 
@@ -58,6 +22,9 @@
             <a href="Booster.html"><p> Booster</p></a>
             <p> Amis</p>
         </div>
+        </div>
+        <div class="logo-site">
+            <img src="image/pokemon-&-Co.png" alt="Logo pokemon & co" width="300px">
         </div>
 <div class="haut-droit">
     <div class="darkmode" id="dark">
@@ -87,20 +54,24 @@
 </div>
 <main>
 
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
+  <div class="swiper">
+    <div class="swiper-wrapper"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <p class="append-buttons">
+    <a href="#" class="prepend-2-slides">Prepend 2 Slides</a>
+    <a href="#" class="slide-1">Slide 1</a>
+    <a href="#" class="slide-250">Slide 250</a>
+    <a href="#" class="slide-500">Slide 500</a>
+    <a href="#" class="append-slide">Append Slide</a>
+  </p>
+
+  <!-- Swiper JS -->
+
 
 </main>
 <footer class="footer1"> 
@@ -146,20 +117,13 @@
             </div>
 
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
-
+<script src="scriptlibrary.js"></script>
 
   <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-        dynamicBullets: true,
-      },
-    });
-  </script>
+
 </body>
 </html>

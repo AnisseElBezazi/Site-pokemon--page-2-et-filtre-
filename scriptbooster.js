@@ -31,7 +31,7 @@ let boutonBooster = document.querySelector(".bouton-ouverture-booster");
 let cartes = document.querySelectorAll(".carte");
 
 boutonBooster.addEventListener("click",function(){
-   
+
 let aleatoire =Math.random();
 let rarete ;
 
@@ -139,4 +139,18 @@ document.querySelectorAll('.carte').forEach(carte => {
            nonFavoris.classList.remove('opaciterMax');/*j'enleve l'opacité au max par default pour que le coeur vide apparait seulement quand on passe au dessus d'une carte */
        }
    });
+});
+
+
+/*Modal echange*/
+let PageEchange = document.querySelector(".echange-body") /*Page pour echanger dans le DOM */
+let boutonEchange =document.querySelector(".echange-bouton")/*Bouton echanger en bas a droite du DOM */
+let Croix = document.querySelector(".croix")/*Croix presente en haut a droite de ma page echanger dans le DOM */
+
+boutonEchange.addEventListener('click', function() {/*Lorsque on click sur le bouton echanger */
+    PageEchange.classList.add("apear")/*ajout d'une class CSS qui pour seul but d'ajouter un display Block */
+});
+
+Croix.addEventListener('click', function() {/*Lorsque on click sur la croix */
+    PageEchange.classList.remove("apear");/*retire une class CSS qui pour seul but d'ajouter un display Block */
 });
